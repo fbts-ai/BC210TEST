@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Store_No_">
+          <DataField>Store_No_</DataField>
+        </Field>
+        <Field Name="StoreName">
+          <DataField>StoreName</DataField>
+        </Field>
+        <Field Name="Dates">
+          <DataField>Dates</DataField>
+        </Field>
+        <Field Name="cash">
+          <DataField>cash</DataField>
+        </Field>
+        <Field Name="cashFormat">
+          <DataField>cashFormat</DataField>
+        </Field>
+        <Field Name="CardOffline_12">
+          <DataField>CardOffline_12</DataField>
+        </Field>
+        <Field Name="CardOffline_12Format">
+          <DataField>CardOffline_12Format</DataField>
+        </Field>
+        <Field Name="offlineUP_33">
+          <DataField>offlineUP_33</DataField>
+        </Field>
+        <Field Name="offlineUP_33Format">
+          <DataField>offlineUP_33Format</DataField>
+        </Field>
+        <Field Name="PinelabCardPaymnet_53">
+          <DataField>PinelabCardPaymnet_53</DataField>
+        </Field>
+        <Field Name="PinelabCardPaymnet_53Format">
+          <DataField>PinelabCardPaymnet_53Format</DataField>
+        </Field>
+        <Field Name="PineLabUPI_52">
+          <DataField>PineLabUPI_52</DataField>
+        </Field>
+        <Field Name="PineLabUPI_52Format">
+          <DataField>PineLabUPI_52Format</DataField>
+        </Field>
+        <Field Name="Swiggi_22">
+          <DataField>Swiggi_22</DataField>
+        </Field>
+        <Field Name="Swiggi_22Format">
+          <DataField>Swiggi_22Format</DataField>
+        </Field>
+        <Field Name="TenderRemovedflot_9">
+          <DataField>TenderRemovedflot_9</DataField>
+        </Field>
+        <Field Name="TenderRemovedflot_9Format">
+          <DataField>TenderRemovedflot_9Format</DataField>
+        </Field>
+        <Field Name="TWC_Wallet_16">
+          <DataField>TWC_Wallet_16</DataField>
+        </Field>
+        <Field Name="TWC_Wallet_16Format">
+          <DataField>TWC_Wallet_16Format</DataField>
+        </Field>
+        <Field Name="TWCApp21">
+          <DataField>TWCApp21</DataField>
+        </Field>
+        <Field Name="TWCApp21Format">
+          <DataField>TWCApp21Format</DataField>
+        </Field>
+        <Field Name="Zomato_23">
+          <DataField>Zomato_23</DataField>
+        </Field>
+        <Field Name="Zomato_23Format">
+          <DataField>Zomato_23Format</DataField>
+        </Field>
+        <Field Name="CustomerAccount">
+          <DataField>CustomerAccount</DataField>
+        </Field>
+        <Field Name="CustomerAccountFormat">
+          <DataField>CustomerAccountFormat</DataField>
+        </Field>
+        <Field Name="UPI">
+          <DataField>UPI</DataField>
+        </Field>
+        <Field Name="UPIFormat">
+          <DataField>UPIFormat</DataField>
+        </Field>
+        <Field Name="AmountD">
+          <DataField>AmountD</DataField>
+        </Field>
+        <Field Name="AmountDFormat">
+          <DataField>AmountDFormat</DataField>
+        </Field>
+        <Field Name="TenderTypeDesc">
+          <DataField>TenderTypeDesc</DataField>
+        </Field>
+        <Field Name="Transaction_No_">
+          <DataField>Transaction_No_</DataField>
+        </Field>
+        <Field Name="NetAmount">
+          <DataField>NetAmount</DataField>
+        </Field>
+        <Field Name="NetAmountFormat">
+          <DataField>NetAmountFormat</DataField>
+        </Field>
+        <Field Name="Amount_Tendered">
+          <DataField>Amount_Tendered</DataField>
+        </Field>
+        <Field Name="Amount_TenderedFormat">
+          <DataField>Amount_TenderedFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

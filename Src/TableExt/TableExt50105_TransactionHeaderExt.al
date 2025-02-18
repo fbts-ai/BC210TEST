@@ -1,0 +1,12 @@
+tableextension 50105 "TransHeaderExt" extends "LSC Transaction Header"
+{
+    fields
+    {
+        field(70000; "Custom Sales Type"; Code[20])
+        {
+            DataClassification = ToBeClassified;
+            TableRelation = "LSC Sales Type";
+        }
+
+    }
+}
