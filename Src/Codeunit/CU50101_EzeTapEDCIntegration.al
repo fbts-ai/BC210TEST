@@ -1105,4 +1105,4 @@ codeunit 50101 "EzetapEDCIntegration"
     end;
 
 }
-
+//FBTS SP
